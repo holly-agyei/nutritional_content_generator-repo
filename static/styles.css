@@ -1,4 +1,3 @@
-/* Container for the full-screen background */
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@ body {
     height: 100vh;
     background: url('background1.jpg') no-repeat center center fixed;
     background-size: cover;
-    animation: backgroundChange 60s infinite; /* 30s per background with 2 backgrounds */
+    animation: backgroundChange 60s infinite;
 }
 
 /* Header with Connect link */
@@ -21,10 +20,8 @@ body {
     text-decoration: none;
     font-size: 1.5em;
     padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-    margin-right: 70px;
-    margin-top: 5px;
 }
 
 /* Styling for the search container */
@@ -34,14 +31,13 @@ body {
     color: white;
     text-align: center;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    backdrop-filter: blur(5px); /* Slight blur for effect */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
-    width: 1000px;
-    height: 180px;
-    margin-left: 380px;
-    margin-top: 100px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 1000px; /* Max width for larger screens */
+    width: 90%; /* Responsive width */
+    margin: 100px auto; /* Centered with margin */
 }
 
 /* Add typewriter effect for the h1 text */
@@ -60,7 +56,7 @@ body {
     border-right: 3px solid orange;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1.7em; /* Reduced font size */
+    font-size: 1.7em;
     animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
     width: 100%;
 }
@@ -70,12 +66,14 @@ body {
     position: relative;
     z-index: 1;
     max-width: 650px;
-    margin: 20px auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background with 70% opacity for better contrast */
+    max-height: 400px; /* Set a maximum height */
+    margin: 0px auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background */
     padding: 20px;
     border-radius: 50px;
     backdrop-filter: blur(5px); /* Slight blur for effect */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 /* Styling the text inside the results */
@@ -96,13 +94,14 @@ form input[type="text"] {
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 10px;
+    width: 80%; /* Make input responsive */
 }
 
 form input[type="submit"].search-btn {
     font-size: 1.4em;
     padding: 12px 30px;
     border-radius: 15px;
-    background-color: #ff8c00; /* Orange color */
+    background-color: #ff8c00;
     color: white;
     border: none;
     cursor: pointer;
@@ -112,7 +111,7 @@ form input[type="submit"].search-btn {
 
 /* Hover effect for the search button */
 form input[type="submit"].search-btn:hover {
-    background-color: #e57e00; /* Darker orange */
+    background-color: #e57e00;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
@@ -124,11 +123,12 @@ form input[type="submit"].search-btn:hover {
     color: white;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     backdrop-filter: blur(5px);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     max-width: 600px;
+    width: 90%; /* Responsive width */
     margin: 50px auto;
 }
 
@@ -142,9 +142,25 @@ form input[type="submit"].search-btn:hover {
 .linkedin-link, .email-link {
     color: orange;
     text-decoration: none;
-    font-size: 1.4em; /* Increased font size for visibility */
+    font-size: 1.4em;
     margin-left: 15px;
 }
 
 /* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .search-container {
+        width: 95%; /* More responsive on smaller screens */
+        margin-top: 50px; /* Adjust margin */
+    }
+
+    .typewriter {
+        font-size: 1.5em; /* Smaller font on mobile */
+    }
+
+    .results pre {
+        font-size: 1em; /* Smaller font for results */
+    }
+}
