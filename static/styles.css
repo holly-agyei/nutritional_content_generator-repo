@@ -1,0 +1,150 @@
+/* Container for the full-screen background */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundChange 60s infinite; /* 30s per background with 2 backgrounds */
+}
+
+/* Header with Connect link */
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.connect-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+    border-radius: 8px;
+    margin-right: 70px;
+    margin-top: 5px;
+}
+
+/* Styling for the search container */
+.search-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Slight blur for effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+    width: 1000px;
+    height: 180px;
+    margin-left: 380px;
+    margin-top: 100px;
+}
+
+/* Add typewriter effect for the h1 text */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+.typewriter {
+    display: inline-block;
+    border-right: 3px solid orange;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.7em; /* Reduced font size */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    width: 100%;
+}
+
+/* Styling for the translucent background of the results */
+.results-container {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background with 70% opacity for better contrast */
+    padding: 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px); /* Slight blur for effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+}
+
+/* Styling the text inside the results */
+.results pre {
+    color: #f0f0f0; /* Light gray text for better contrast */
+    font-family: 'Roboto', sans-serif; /* A modern, readable font */
+    font-size: 1.12em; /* Increased font size for readability */
+    white-space: pre-wrap; /* Ensure text wraps properly */
+    word-wrap: break-word; /* Break long words if necessary */
+    line-height: 1.6; /* Add some space between lines for clarity */
+    text-align: left;
+}
+
+/* Styling the form inputs */
+form input[type="text"] {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"].search-btn {
+    font-size: 1.4em;
+    padding: 12px 30px;
+    border-radius: 15px;
+    background-color: #ff8c00; /* Orange color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for the search button */
+form input[type="submit"].search-btn:hover {
+    background-color: #e57e00; /* Darker orange */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the connect page */
+.connect-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+/* Styling for the contact links */
+.contact-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.linkedin-link, .email-link {
+    color: orange;
+    text-decoration: none;
+    font-size: 1.4em; /* Increased font size for visibility */
+    margin-left: 15px;
+}
+
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');

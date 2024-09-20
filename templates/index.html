@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Nutrient Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <header class="header">
+        <a href="{{ url_for('connect') }}" class="connect-link">Connect</a>
+    </header>
+
+    <div class="search-container">
+        <h1>
+            <span class="typewriter">Check your fav chop!</span>
+        </h1>
+        <form method="POST" action="/search">
+            <label for="food">Enter food item:</label>
+            <input type="text" id="food" name="food" placeholder="Type your single text food" required>
+            <input type="submit" value="Search" class="search-btn">
+        </form>
+    </div>
+
+    <div class="results-container">
+        <div class="results">
+            <pre>{{ results }}</pre>
+        </div>
+    </div>
+
+</body>
+</html>
