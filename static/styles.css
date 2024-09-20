@@ -35,9 +35,9 @@ body {
     border-radius: 10px;
     backdrop-filter: blur(5px);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    max-width: 1000px; /* Max width for larger screens */
-    width: 90%; /* Responsive width */
-    margin: 100px auto; /* Centered with margin */
+    max-width: 1000px;
+    width: 90%;
+    margin: 100px auto;
 }
 
 /* Add typewriter effect for the h1 text */
@@ -57,7 +57,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     font-size: 1.5em;
-    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    animation: typing 5s steps(40, end), blink-caret .75s step-end infinite; /* Increased duration */
     width: 100%;
 }
 
@@ -66,24 +66,24 @@ body {
     position: relative;
     z-index: 1;
     max-width: 650px;
-    max-height: 400px; /* Set a maximum height */
-    margin: 0px auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+    max-height: 400px; 
+    margin: 20px auto; /* Adjusted margin to move it up */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(5px); /* Slight blur for effect */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
-    overflow-y: auto; /* Enable vertical scrolling */
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 }
 
 /* Styling the text inside the results */
 .results pre {
-    color: #f0f0f0; /* Light gray text for better contrast */
-    font-family: 'Roboto', sans-serif; /* A modern, readable font */
-    font-size: 1.12em; /* Increased font size for readability */
-    white-space: pre-wrap; /* Ensure text wraps properly */
-    word-wrap: break-word; /* Break long words if necessary */
-    line-height: 1.6; /* Add some space between lines for clarity */
+    color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.12em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.6;
     text-align: left;
 }
 
@@ -94,7 +94,7 @@ form input[type="text"] {
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-bottom: 10px;
-    width: 80%; /* Make input responsive */
+    width: 80%; 
 }
 
 form input[type="submit"].search-btn {
@@ -128,7 +128,7 @@ form input[type="submit"].search-btn:hover {
     backdrop-filter: blur(5px);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     max-width: 600px;
-    width: 90%; /* Responsive width */
+    width: 90%;
     margin-top: 5px;
     margin-right: 2px;
 }
@@ -153,16 +153,16 @@ form input[type="submit"].search-btn:hover {
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
     .search-container {
-        width: 95%; /* More responsive on smaller screens */
-        margin-top: 50px; /* Adjust margin */
+        width: 95%; 
+        margin-top: 50px; 
     }
 
     .typewriter {
-        font-size: 1.5em; /* Smaller font on mobile */
-        animation: typing 3s steps(30, end), blink-caret .75s step-end infinite; /* Adjust timing */
+        font-size: 1.5em; 
+        animation: typing 4s steps(30, end), blink-caret .75s step-end infinite; /* Adjust timing */
     }
 
     .results pre {
-        font-size: 1em; /* Smaller font for results */
+        font-size: 1em; 
     }
 }
