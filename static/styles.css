@@ -18,7 +18,7 @@ body {
 .connect-link {
     color: rgb(230, 173, 53);
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 1.3em;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
@@ -56,7 +56,7 @@ body {
     border-right: 3px solid orange;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1.7em;
+    font-size: 1.5em;
     animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
     width: 100%;
 }
@@ -70,7 +70,7 @@ body {
     margin: 0px auto;
     background-color: rgba(0, 0, 0, 0.7); /* Darker background */
     padding: 20px;
-    border-radius: 50px;
+    border-radius: 10px;
     backdrop-filter: blur(5px); /* Slight blur for effect */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
     overflow-y: auto; /* Enable vertical scrolling */
@@ -129,7 +129,8 @@ form input[type="submit"].search-btn:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     max-width: 600px;
     width: 90%; /* Responsive width */
-    margin: 50px auto;
+    margin-top: 5px;
+    margin-right: 2px;
 }
 
 /* Styling for the contact links */
@@ -158,6 +159,7 @@ form input[type="submit"].search-btn:hover {
 
     .typewriter {
         font-size: 1.5em; /* Smaller font on mobile */
+        animation: typing 3s steps(30, end), blink-caret .75s step-end infinite; /* Adjust timing */
     }
 
     .results pre {
